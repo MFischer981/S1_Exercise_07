@@ -7,7 +7,6 @@
    
    Author:   Micah Fischer
    Date:     11-15-18
-   
    Filename: tf_flex.css
    
    This file contains the flex styles used in the Trusted Friends
@@ -21,7 +20,27 @@
    ================
 */
 
+body {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
 
+header,
+footer {
+    width: 100%;
+}
+
+aside {
+    -webkit-flex: 1 1 120px;
+    flex: 1 1 120px;
+}
+
+#main {
+    -webkit-flex: 3 1 361px;
+    flex: 3 1 361px;
+}
 
 
 /* =========================

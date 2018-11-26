@@ -24,7 +24,7 @@
 /* HTML and Body Styles */
 
 html {
-    background: url(tf_back1.png) center center / cover no-repeat fixed;
+    background: url("tf_back1.png") center center / cover no-repeat fixed;
     height: 100%;
     font-family: Verdana, Geneva, sans-serif;
     font-size: 12px;
@@ -147,7 +147,7 @@ body>footer {
 
 /* Pulldown Menu Styles */
 
-.submenu {
+ul.submenu {
     display: none;
 }
 
@@ -185,8 +185,8 @@ TABLET STYLES 481-768px
         position: relative;
     }
 
-    .submenu {
-        width: 20%;
+    ul.submenu {
+        width: 140%;
         box-shadow: rgb(51, 51, 51) 5px 5px 15px;
         position: absolute;
     }
@@ -197,11 +197,33 @@ DESKTOP STYLES 769px+
 ==================== */
 
 @media only screen and (min-width: 769px) {
-    .submenu {
+    ul.submenu {
         background: transparent;
         box-shadow: none;
         display: block;
         position: relative;
         width: 100%;
     }
+
+    .horizontal::after {
+        display: table;
+        content: "";
+        clear: both;
+    }
+
+    .horizontal .submenuTitle {
+        display: none;
+    }
+
+    article {
+        float: left;
+        margin-right: 5%;
+        width: 55%;
+    }
+
+    aside {
+        float: left;
+        width: 40%;
+    }
+
 }
